@@ -1,0 +1,24 @@
+
+.horizontal-menu {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: BLACK;
+    border-bottom: 1px solid var(--custom-green);
+ 
+}
+
+.horizontal-menu a {
+    color: white;
+    margin-top: 20px;
+    padding: 7px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.horizontal-menu a.active {
+    background-color:var(--custom-green);
+    color: white;
+    border-radius: 5px 5px 0 0;
+}

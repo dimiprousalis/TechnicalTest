@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="sub-container">
+        <span>Visualization</span>
+        <fa-icon class="icon" [icon]="faGrip" ></fa-icon>
+        <fa-icon class="icon" [icon]="faBars" ></fa-icon>
+    </div>
+    <div class="sub-container">
+        <label for="selection">Select All </label>
+        <input type="checkbox" name="selection" id="selection" />
+    </div>
+    <div class="sub-container actions">
+        <label for="task">Actions</label>
+        <select name="task" id="task">
+            <option value="delete">Delete</option>
+        </select>
+        <button>OK</button>
+    </div>
+    <div class="sub-container filter">
+        <label for="filter">Filter by</label>
+        <input type="text" name="filter" id="filter" placeholder="Tag" />
+    </div>
+    <div class="sub-container">
+        <span>Sort by</span>
+        <fa-icon class="icon" [icon]="faArrowUpAZ"></fa-icon>
+        <fa-icon class="icon" [icon]="faArrowDownAZ"></fa-icon>
+    </div>
+    <div class="sub-container search">
+        <label for="search"></label>
+        <input placeholder="Search" type="search" id="search" name="search" />
+    </div>
+</div>

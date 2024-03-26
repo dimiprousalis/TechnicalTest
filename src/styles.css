@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --custom-darkgray: #282722;
+    --custom-green: #2a9a6a;
+    --custom-lightgray: #505351;
+    font-family: "Poppins", sans-serif;
+ 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    height: 100vh;
+    background: radial-gradient(ellipse at top, rgba(55, 67, 68, 1) 0%, rgb(28, 24, 19) 50%);
+}
+
+body {
+    height: 100vh;
+}
+.card-grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-gap: 20px;
+    margin: 50px auto;
+    height: 100vh;
+  
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 50px auto;
+}

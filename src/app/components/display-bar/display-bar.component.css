@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    color: white;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.sub-container {
+    padding-right: 15px;
+    border-right: 1px solid var(--custom-green);
+}
+.sub-container * {
+    padding: 5px;
+}
+
+.actions select {
+    background-color: var(--custom-lightgray);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    width: 140px;
+}
+
+.search input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.filter input {
+    background-color: var(--custom-lightgray);
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+button {
+    background-color: var(--custom-green);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}

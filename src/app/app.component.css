@@ -1,0 +1,14 @@
+
+.container {
+    display: flex;
+    width: 100vw;
+    background: radial-gradient(ellipse at top, rgba(55, 67, 68, 1) 0%, rgb(28, 24, 19) 50%);
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.menus {
+    flex-grow: 15;
+}

@@ -1,0 +1,26 @@
+
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--custom-darkgray);
+    height: 100%;
+}
+
+.vertical-menu a {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+
+.vertical-menu a.active {
+    background-color: #1c1c18;
+    color: var(--custom-green);
+}
+
+.vertical-menu .logo {
+    color: var(--custom-green);
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 100px;
+}
