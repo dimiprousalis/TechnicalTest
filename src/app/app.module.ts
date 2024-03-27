@@ -18,6 +18,11 @@ import { CardComponent } from './components/card/card.component';
 import { StandsComponent } from './pages/stands/stands.component';
 import { MerchandiseComponent } from './pages/merchandise/merchandise.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AddNewButtonComponent } from './components/add-new-button/add-new-button.component';
+import { SectorItemComponent } from './pages/sector-item/sector-item.component';
+import { PavilionItemComponent } from './pages/pavilion-item/pavilion-item.component';
+import { StandItemComponent } from './pages/stand-item/stand-item.component';
+import { MerchandiseItemComponent } from './pages/merchandise-item/merchandise-item.component';
 
 
 
@@ -42,7 +47,12 @@ const appRoutes: Routes = [
     CardComponent,
     StandsComponent,
     MerchandiseComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AddNewButtonComponent,
+    SectorItemComponent,
+    PavilionItemComponent,
+    StandItemComponent,
+    MerchandiseItemComponent
   ],
   imports: [
     BrowserModule,

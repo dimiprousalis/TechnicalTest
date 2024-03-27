@@ -4,8 +4,11 @@ export interface Stand {
     pavilion: string;
     image: string;
     sector: string;
-    dimension1: number;
-    dimension2: number;
+    dimensions: string;
     floor: string;
     notes: string;
+    long1: number;
+    long2: number;
+    lat1: number;
+    lat2: number;
 }

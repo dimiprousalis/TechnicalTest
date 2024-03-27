@@ -1,3 +1,5 @@
 <app-display-bar></app-display-bar>
+<app-add-new-button (btnClick)="toggleAddNew()"></app-add-new-button>
+<app-stand-item (onAddNew)="addNew($event)"></app-stand-item>
 <div class="card-grid-container"><app-card *ngFor="let stand of stands" [data]="stand" cardType="stand">
     </app-card></div>

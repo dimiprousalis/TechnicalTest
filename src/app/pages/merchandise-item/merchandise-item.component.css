@@ -1,0 +1,39 @@
+h1 {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+input,
+textarea {
+    background-color: rgba(0, 0, 0, 0.445);
+    border: 1px solid var(--custom-green);
+    padding: 5px;
+    color: white;
+}
+
+.next-levels {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    gap: 5px;
+    margin: auto;
+    flex-grow: 1;
+}
+
+.levels {
+    height: 90%;
+    border: 1px solid var(--custom-green);
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.submit-btn {
+    background-color: var(--custom-green);
+    align-self: flex-end;
+    width: 120px;
+    padding: 5px;
+    border-radius: 7px;
+    color: white;
+}
+

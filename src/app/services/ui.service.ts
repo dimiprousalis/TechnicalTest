@@ -6,16 +6,13 @@ import { Observable, Subject } from 'rxjs';
 })
 export class UiService {
 
-  private showHorizontalView: boolean = false;
-  private showVerticalView: boolean = false;
-  private subject = new Subject<any>();
+  private showAddNew: boolean = false;
+  private subject = new Subject<any>()
+  constructor() { }
 
-  constructor() {}
-
-  toggleHorizontalView(): void {
-    this.showHorizontalView = true;
-    this.showVerticalView=false;
-    this.subject.next(this.showHorizontalView);
+  toggleAddNew(): void {
+    this.showAddNew = true;
+    this.subject.next(this.showAddNew)
   }
 
   onToggle(): Observable<any> {

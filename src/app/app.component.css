@@ -11,4 +11,6 @@
 
 .menus {
     flex-grow: 15;
+    min-height: 100vh;
+
 }

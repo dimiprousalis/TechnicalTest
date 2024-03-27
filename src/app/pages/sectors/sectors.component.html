@@ -1,3 +1,5 @@
 <app-display-bar></app-display-bar>
+<app-add-new-button (btnClick)="toggleAddNew()"></app-add-new-button>
+<app-sector-item (onAddNew)="addNew($event)"></app-sector-item>
 <div class="card-grid-container"><app-card *ngFor="let sector of sectors" [data]="sector" cardType="sector">
     </app-card></div>

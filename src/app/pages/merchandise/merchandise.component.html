@@ -1,3 +1,5 @@
 <app-display-bar></app-display-bar>
+<app-add-new-button (btnClick)="toggleAddNew()"></app-add-new-button>
+<app-merchandise-item (onAddNew)="addNew($event)"></app-merchandise-item>
 <div class="card-grid-container"><app-card *ngFor="let merchandise of merchandises" [data]="merchandise" cardType="merchandise">
     </app-card></div>

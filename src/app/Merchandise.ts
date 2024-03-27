@@ -4,4 +4,6 @@ export interface Merchandise {
     image: string;
     description: string;
     homepage: boolean;
+    categoryCode: string;
+    tag: string;
 }

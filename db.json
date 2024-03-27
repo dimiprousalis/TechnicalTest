@@ -1,230 +1,220 @@
 {
-    "pavilions": [
-        {
-            "id": 1,
-            "name": "Pavilion 1",
-            "image":"image1.png",
-            "area": "Gaming Zone",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        },
-        {
-            "id": 2,
-            "name": "Pavilion 2",
-            "image":"image2.png",
-            "area": "Intel Esport Show",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        },
-        {
-            "id": 3,
-            "name": "Pavilion 3",
-            "image":"image3.png",
-            "area": "Indie Dungeon",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        },
-        {
-            "id": 4,
-            "name": "Pavilion 4",
-            "image":"image4.png",
-            "area": "Arcade Universe",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        },
-        {
-            "id": 5,
-            "name": "Pavilion 5",
-            "image":"image5.png",
-            "area": "Test Area 5",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        },
-        {
-            "id": 6,
-            "name": "Pavilion 6",
-            "image":"image6.png",
-            "area": "Gaming Zone",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        },
-        {
-            "id": 7,
-            "name": "Pavilion 7",
-            "image":"image7.png",
-            "area": "Gaming Zone",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        },
-        {
-            "id": 8,
-            "name": "Pavilion 8",
-            "image":"image8.png",
-            "area": "Gaming Zone",
-            "poweredBy": "Gamestop",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi"
-        }
-    ],
-
-    "sectors": [
-        {
-            "id": 1,
-            "name": "Accessories and Components",
-            "image":"image9.png",
-            "associatedStands": "02",
-            "status": "Approved",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi",
-            "lastEdit": "3/25/24"
-        },
-        {
-            "id": 2,
-            "name": "Attractions for theme parks, water parks",
-            "image":"image10.png",
-            "associatedStands": "11",
-            "status": "Draft",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi",
-            "lastEdit": "3/25/24"
-        },
-        {
-            "id": 3,
-            "name": "Flipper",
-            "image":"image11.png",
-            "associatedStands": "14",
-            "status": "Draft",
-            "description": "In collaboration with Lorem Ipsum",
-            "tags": "Giochi",
-            "lastEdit": "3/25/24"
-        }
-    ],
-
-    "stands": [
-        {
-            "id": 1,
-            "name": "Stand 1",
-            "pavilion": "1",
-            "image":"image12.png",
-            "sector": "C",
-            "dimension1": "4",
-            "dimension2": "4",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        },
-        {
-            "id": 2,
-            "name": "Stand 2",
-            "pavilion": "1",
-            "image":"image13.png",
-            "sector": "B",
-            "dimension1": "3",
-            "dimension2": "4",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        },
-        {
-            "id": 3,
-            "name": "Stand 3",
-            "pavilion": "1",
-            "image":"image14.png",
-            "sector": "C",
-            "dimension1": "4",
-            "dimension2": "4",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        },
-        {
-            "id": 4,
-            "name": "Stand 4",
-            "pavilion": "2",
-            "image":"image15.png",
-            "sector": "C",
-            "dimension1": "4",
-            "dimension2": "4",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        },
-        {
-            "id": 5,
-            "name": "Stand 5",
-            "pavilion": "2",
-            "image":"image16.png",
-            "sector": "A",
-            "dimension1": "5",
-            "dimension2": "4",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        },
-        {
-            "id": 6,
-            "name": "Stand 6",
-            "pavilion": "3",
-            "image":"image17.png",
-            "sector": "B",
-            "dimension1": "3",
-            "dimension2": "3",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        },
-        {
-            "id": 7,
-            "name": "Stand 7",
-            "pavilion": "4",
-            "image":"image18.png",
-            "sector": "D",
-            "dimension1": "6",
-            "dimension2": "5",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        },
-        {
-            "id": 8,
-            "name": "Stand 8",
-            "pavilion": "2",
-            "image":"image19.png",
-            "sector": "C",
-            "dimension1": "2",
-            "dimension2": "3",
-            "floor": "1",
-            "notes": "In collaboration with Lorem Ipsum"
-        }
-    ],
-    "merchandise": [
-        {
-            "id": 1,
-            "name": "Table Games",
-            "image":"image20.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "homepage": true
-        },
-        {
-            "id": 2,
-            "name": "Board Games",
-            "image":"image21.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "homepage": true
-        },
-        {
-            "id": 3,
-            "name": "Gambling Games",
-            "image":"image22.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "homepage": true
-        },
-        {
-            "id": 4,
-            "name": "Stationary Store",
-            "image":"image23.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "homepage": true
-        }
-    ]
+  "pavilions": [
+    {
+      "id": "1",
+      "name": "Pavilion 1",
+      "image": "image1.png",
+      "area": "Gaming Zone",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    },
+    {
+      "id": "2",
+      "name": "Pavilion 2",
+      "image": "image2.png",
+      "area": "Intel Esport Show",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    },
+    {
+      "id": "3",
+      "name": "Pavilion 3",
+      "image": "image3.png",
+      "area": "Indie Dungeon",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    },
+    {
+      "id": "4",
+      "name": "Pavilion 4",
+      "image": "image4.png",
+      "area": "Arcade Universe",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    },
+    {
+      "id": "5",
+      "name": "Pavilion 5",
+      "image": "image5.png",
+      "area": "Test Area 5",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    },
+    {
+      "id": "6",
+      "name": "Pavilion 6",
+      "image": "image6.png",
+      "area": "Gaming Zone",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    },
+    {
+      "id": "7",
+      "name": "Pavilion 7",
+      "image": "image7.png",
+      "area": "Gaming Zone",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    },
+    {
+      "id": "8",
+      "name": "Pavilion 8",
+      "image": "image8.png",
+      "area": "Gaming Zone",
+      "poweredBy": "Gamestop",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi"
+    }
+  ],
+  "sectors": [
+    {
+      "id": "1",
+      "name": "Accessories and Components",
+      "image": "image9.png",
+      "associatedStands": "02",
+      "status": "Approved",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi",
+      "lastEdit": "3/25/24"
+    },
+    {
+      "id": "2",
+      "name": "Attractions for theme parks, water parks",
+      "image": "image10.png",
+      "associatedStands": "11",
+      "status": "Draft",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi",
+      "lastEdit": "3/25/24"
+    },
+    {
+      "id": "3",
+      "name": "Flipper",
+      "image": "image11.png",
+      "associatedStands": "14",
+      "status": "Draft",
+      "description": "In collaboration with Lorem Ipsum",
+      "tags": "Giochi",
+      "lastEdit": "3/25/24"
+    }
+  ],
+  "stands": [
+    {
+      "id": "1",
+      "name": "Stand 1",
+      "pavilion": "1",
+      "image": "image12.png",
+      "sector": "C",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    },
+    {
+      "id": "2",
+      "name": "Stand 2",
+      "pavilion": "1",
+      "image": "image13.png",
+      "sector": "B",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    },
+    {
+      "id": "3",
+      "name": "Stand 3",
+      "pavilion": "1",
+      "image": "image14.png",
+      "sector": "C",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    },
+    {
+      "id": "4",
+      "name": "Stand 4",
+      "pavilion": "2",
+      "image": "image15.png",
+      "sector": "C",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    },
+    {
+      "id": "5",
+      "name": "Stand 5",
+      "pavilion": "2",
+      "image": "image16.png",
+      "sector": "A",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    },
+    {
+      "id": "6",
+      "name": "Stand 6",
+      "pavilion": "3",
+      "image": "image17.png",
+      "sector": "B",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    },
+    {
+      "id": "7",
+      "name": "Stand 7",
+      "pavilion": "4",
+      "image": "image18.png",
+      "sector": "D",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    },
+    {
+      "id": "8",
+      "name": "Stand 8",
+      "pavilion": "2",
+      "image": "image19.png",
+      "sector": "C",
+      "dimensions": "3m x 4m",
+      "floor": "1",
+      "notes": "In collaboration with Lorem Ipsum"
+    }
+  ],
+  "merchandise": [
+    {
+      "id": "1",
+      "name": "Table Games",
+      "image": "image20.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "homepage": true
+    },
+    {
+      "id": "2",
+      "name": "Board Games",
+      "image": "image21.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "homepage": true
+    },
+    {
+      "id": "3",
+      "name": "Gambling Games",
+      "image": "image22.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "homepage": true
+    },
+    {
+      "id": "4",
+      "name": "Stationary Store",
+      "image": "image23.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "homepage": true
+    }
+  ]
 }

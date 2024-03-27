@@ -1,7 +1,13 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Sector } from '../Sector';
 import { Observable } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+};
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +21,10 @@ export class SectorService {
   getData(): Observable<Sector[]> {
     return this.http.get<Sector[]>(this.apiUrl);
   }
+
+  addNew(sector: Sector): Observable<Sector> {
+    return this.http.post<Sector>(this.apiUrl, sector, httpOptions)
+
+  }
+
 }

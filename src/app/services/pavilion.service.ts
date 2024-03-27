@@ -23,4 +23,9 @@ export class PavilionService {
     return this.http.get<Pavilion[]>(this.apiUrl);
   }
 
+  addNew(pavilion: Pavilion): Observable<Pavilion> {
+    return this.http.post<Pavilion>(this.apiUrl, pavilion, httpOptions)
+
+  }
+
 }
