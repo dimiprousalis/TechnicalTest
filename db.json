@@ -1,4 +1,55 @@
 {
+  "user": [
+    {
+      "id": "dimi",
+      "username": "dimi",
+      "email": "dimi@dimi.com",
+      "password": "12345678",
+      "role": "Admin"
+    },
+    {
+      "id": "test",
+      "username": "test2",
+      "email": "d@dimi.com",
+      "password": "123456d78",
+      "role": "Admin"
+    },
+    {
+      "id": "8705",
+      "username": "bobby",
+      "email": "b@b.com",
+      "password": "12345678",
+      "role": "Supervisor"
+    },
+    {
+      "id": "8524",
+      "username": "bb",
+      "email": "b@b.com",
+      "password": "123",
+      "role": "Admin"
+    },
+    {
+      "id": "e18c",
+      "username": "temp",
+      "email": "temp@temp.com",
+      "password": "1234",
+      "role": "Supervisor"
+    },
+    {
+      "id": "1368",
+      "username": "testing5",
+      "email": "1234",
+      "password": "pass",
+      "role": "Admin"
+    },
+    {
+      "id": "b7bc",
+      "username": "k",
+      "email": "kk",
+      "password": "bu",
+      "role": "Supervisor"
+    }
+  ],
   "pavilions": [
     {
       "id": "1",

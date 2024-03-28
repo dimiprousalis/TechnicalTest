@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { faFile, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faBorderAll } from '@fortawesome/free-solid-svg-icons';
 

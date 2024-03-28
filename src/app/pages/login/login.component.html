@@ -1,0 +1,16 @@
+<div class="login-register">
+    <h1>Login</h1>
+    <form [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+        <div>
+            <input type="text" placeholder="Username" formControlName="username" />
+        </div>
+        <div>
+            <input type="password" placeholder="Password" formControlName="password" />
+        </div>
+        <div>
+            <button type="submit">Log In</button>
+        </div>
+    </form>
+    <span>Need an Account?</span>
+    <a routerLink="/register">Signup</a>
+</div>

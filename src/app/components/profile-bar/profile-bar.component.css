@@ -19,5 +19,14 @@
     border: 1px solid white;
     width: 50px;
     text-align: center;
-   
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--custom-green);
+}
+

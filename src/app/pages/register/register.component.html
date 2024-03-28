@@ -1,0 +1,26 @@
+<div class="login-register">
+    <h1>Register</h1>
+    <form [formGroup]="form" (ngSubmit)="proceedregister()">
+        <div>
+            <input type="text" placeholder="Username" formControlName="username" />
+        </div>
+        <div>
+            <input type="text" placeholder="Email" formControlName="email" />
+        </div>
+        <div>
+            <input type="password" placeholder="Password" formControlName="password" />
+        </div>
+        <div>
+            <select placeholder="Role" formControlName="role">
+                <option value="" disabled selected>Select your Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Supervisor">Supervisor</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+    <span>Already Have an Account?</span>
+    <a routerLink="/login">Login</a>
+</div>

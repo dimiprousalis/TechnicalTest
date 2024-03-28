@@ -51,7 +51,6 @@ body {
     z-index: 100;
 }
 
-
 .form-container {
     background-color: var(--custom-darkgray-tr);
     width: 55%;
@@ -112,8 +111,6 @@ body {
     width: 40%;
 }
 
-
-
 .close-btn {
     background: none;
     border: none;
@@ -127,4 +124,61 @@ body {
     border-radius: 10px;
     border: 1px solid white;
     display: inline-flex;
+}
+
+/* -----LOGIN AND REGISTER PAGES------ */
+
+.login-register {
+    background-color: rgba(98, 95, 95, 0.126);
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid black;
+}
+
+.login-register input, select {
+    background-color: var(--custom-darkgray);
+    border: 1px solid var(--custom-green);
+    border-radius: 5px;
+    padding: 5px;
+    width: 250px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+    color: white;
+}
+
+
+.login-register button {
+    background-color: var(--custom-green);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-top: 20px;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login-register h1 {
+    color: var(--custom-green);
+    font-size: 45px;
+    text-shadow: black 0px 0px 5px, black 0px 0px 15px;
+}
+
+.login-register span {
+    color: white;
+}
+
+.login-register a {
+    color: var(--custom-green);
 }

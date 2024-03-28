@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -23,16 +23,24 @@ import { SectorItemComponent } from './pages/sector-item/sector-item.component';
 import { PavilionItemComponent } from './pages/pavilion-item/pavilion-item.component';
 import { StandItemComponent } from './pages/stand-item/stand-item.component';
 import { MerchandiseItemComponent } from './pages/merchandise-item/merchandise-item.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { AuthGuard } from './guard/auth.guard';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
 const appRoutes: Routes = [
-  { path: '', component: PavilionsComponent },
-  { path: 'pavilions', component: PavilionsComponent },
-  { path: 'sectors', component: SectorsComponent },
-  { path: 'stands', component: StandsComponent },
-  { path: 'merchandise', component: MerchandiseComponent },
-  { path: 'not-found', component: NotFoundComponent }
+  { path: '', component: PavilionsComponent, canActivate: [AuthGuard] },
+  { path: 'pavilions', component: PavilionsComponent, canActivate: [AuthGuard] },
+  { path: 'sectors', component: SectorsComponent,canActivate: [AuthGuard] },
+  { path: 'stands', component: StandsComponent,canActivate: [AuthGuard] },
+  { path: 'merchandise', component: MerchandiseComponent,canActivate: [AuthGuard] },
+  { path: 'not-found', component: NotFoundComponent,canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+
 ]
 
 @NgModule({
@@ -52,7 +60,9 @@ const appRoutes: Routes = [
     SectorItemComponent,
     PavilionItemComponent,
     StandItemComponent,
-    MerchandiseItemComponent
+    MerchandiseItemComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +70,9 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes, { enableTracing: true })
   ],
   providers: [],

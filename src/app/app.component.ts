@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hidonix-project';
+  isMenuVisible = false;
 
+  constructor(private route: Router) { }
 
-  constructor() { }
+  ngDoCheck(): void {
+    let currentroute = this.route.url;
+    if (currentroute == '/login' || currentroute == '/register') {
+      this.isMenuVisible = false
+    } else {
+      this.isMenuVisible = true
+    }
+  }
 
-
+  
 }
