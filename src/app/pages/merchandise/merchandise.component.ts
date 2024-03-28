@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { MerchandiseService } from '../../services/merchandise.service';
 import { Merchandise } from '../../Merchandise';
-import { UiService } from '../../services/ui.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-merchandise',
@@ -11,25 +9,43 @@ import { Subscription } from 'rxjs';
 })
 export class MerchandiseComponent {
   merchandises: Merchandise[] = []
-  showAddNew: boolean = false;
-  subscription: Subscription;
+  isFormVisible: boolean=false;
+  editData: Merchandise | null = null; 
 
-  constructor(private merchandiseService: MerchandiseService, private uiService: UiService) {
-    this.subscription = this.uiService
-      .onToggle()
-      .subscribe((value) => (this.showAddNew = value));
-  }
+  constructor(private merchandiseService: MerchandiseService) {}
 
   ngOnInit(): void {
     this.merchandiseService.getData().subscribe((merchandises) => (this.merchandises = merchandises));
   }
 
+  showAddNew() {
+    this.isFormVisible = true
+  }
 
-  toggleAddNew() {
-    this.uiService.toggleAddNew();
+  closeForm() {
+    this.isFormVisible = false
+    this.editData= null
   }
 
   addNew(merchandise: Merchandise) {
     this.merchandiseService.addNew(merchandise).subscribe((merchandises) => (this.merchandises.push(merchandise)));
+  }
+
+  deleteItem(merchandise: Merchandise) {
+    this.merchandiseService
+      .deleteItem(merchandise)
+      .subscribe(
+        () => (this.merchandises = this.merchandises.filter((t) => t.id !== merchandise.id))
+      );
+  }
+
+  openEditItem(merchandise: Merchandise) {
+    this.editData = merchandise
+    this.isFormVisible = true
+  }
+
+  editItem(merchandise: Merchandise) {
+    this.merchandiseService
+      .editItem(merchandise).subscribe();
   }
 }

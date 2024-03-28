@@ -24,7 +24,16 @@ export class SectorService {
 
   addNew(sector: Sector): Observable<Sector> {
     return this.http.post<Sector>(this.apiUrl, sector, httpOptions)
-
   }
 
+  deleteItem(sector: Sector): Observable<Sector> {
+    const url = `${this.apiUrl}/${sector.id}`; // URL for the specific task
+    return this.http.delete<Sector>(url);
+  }
+
+  editItem(sector: Sector): Observable<Sector> {
+    const url = `${this.apiUrl}/${sector.id}`; // URL for the specific task
+    console.log("service called" + sector.name)
+    return this.http.put<Sector>(url, sector, httpOptions);
+  }
 }

@@ -1,5 +1,5 @@
 export interface Stand {
-    id?: number;
+    id?: string;
     name: string;
     pavilion: string;
     image: string;

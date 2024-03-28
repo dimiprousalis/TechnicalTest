@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Sector } from '../../Sector';
 import { SectorService } from '../../services/sector.service';
-import { Subscription } from 'rxjs';
-import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-sectors',
@@ -11,28 +9,45 @@ import { UiService } from '../../services/ui.service';
 })
 export class SectorsComponent {
   sectors: Sector[] = []
+  isFormVisible: boolean=false;
+  editData: Sector | null = null; // Declare editData property
 
-
- 
-  showAddNew: boolean = false;
-  subscription: Subscription;
-
-  constructor(private sectorService: SectorService, private uiService: UiService) { 
-    this.subscription = this.uiService
-    .onToggle()
-    .subscribe((value) => (this.showAddNew = value));
-  }
-
+  constructor(private sectorService: SectorService) {}
 
   ngOnInit(): void {
     this.sectorService.getData().subscribe((sectors) => (this.sectors = sectors));
   }
 
-  toggleAddNew() {
-    this.uiService.toggleAddNew();
+  showAddNew() {
+    this.isFormVisible = true
+  }
+
+  closeForm() {
+    this.isFormVisible = false
+    this.editData= null
   }
 
   addNew(sector: Sector) {
     this.sectorService.addNew(sector).subscribe((sectors) => (this.sectors.push(sector)));
+  }
+
+  deleteItem(sector: Sector) {
+    this.sectorService
+      .deleteItem(sector)
+      .subscribe(
+        () => (this.sectors = this.sectors.filter((t) => t.id !== sector.id))
+      );
+  }
+
+  openEditItem(sector: Sector) {
+    this.editData = sector
+    this.isFormVisible = true
+  }
+
+  editItem(sector: Sector) {
+    this.sectorService
+      .editItem(sector).subscribe();
+
+      
   }
 }

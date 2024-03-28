@@ -5,6 +5,7 @@
     padding-top: 20px;
     margin: auto;
 }
+
 button {
     background-color: transparent;
     color: white;
@@ -18,7 +19,7 @@ button {
 
 button:hover {
     background-color: var(--custom-green)
-  }
+}
 
 span {
     color: white;

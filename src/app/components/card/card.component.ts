@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faPencil } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -11,8 +12,18 @@ export class CardComponent {
 
   @Input() data: any;
   @Input() cardType: string = ""
-
+  @Output() onDeleteItem: EventEmitter<any> = new EventEmitter() 
+  @Output() onOpenEditItem: EventEmitter<any> = new EventEmitter() 
 
     // Fort Awesome icons
-    faEllipsisVertical = faEllipsisVertical;
+    faTrashCan = faTrashCan;
+    faPencil = faPencil;
+
+    onDelete(data: any) {
+      this.onDeleteItem.emit(data) // Emitting the delete event to the parent component
+    }
+
+    onOpenEditor(data: any) {
+      this.onOpenEditItem.emit(data)
+    }
 }

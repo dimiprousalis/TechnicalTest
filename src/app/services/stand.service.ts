@@ -23,8 +23,19 @@ export class StandService {
     return this.http.get<Stand[]>(this.apiUrl);
   }
 
-  addNew(sector: Stand): Observable<Stand> {
-    return this.http.post<Stand>(this.apiUrl, sector, httpOptions)
+  addNew(stand: Stand): Observable<Stand> {
+    return this.http.post<Stand>(this.apiUrl, stand, httpOptions)
+  }
+
+  deleteItem(stand: Stand): Observable<Stand> {
+    const url = `${this.apiUrl}/${stand.id}`; // URL for the specific task
+    return this.http.delete<Stand>(url);
+  }
+
+  editItem(stand: Stand): Observable<Stand> {
+    const url = `${this.apiUrl}/${stand.id}`; // URL for the specific task
+    console.log("service called" + stand.name)
+    return this.http.put<Stand>(url, stand, httpOptions);
   }
 
 }

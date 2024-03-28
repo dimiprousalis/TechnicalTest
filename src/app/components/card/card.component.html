@@ -1,26 +1,24 @@
-<!------------------------- PAVILIONS ------------------------->
-<div *ngIf="cardType === 'pavilion'">
-    <div class="card-container">
-        <div class="card-header">
-            <input type="checkbox" name="selectPavilion" id="selectPavilion" />
-            <fa-icon class="icon" [icon]="faEllipsisVertical"></fa-icon>
+<div class="card-container sector">
+    <div class="card-header">
+        <input type="checkbox" name="selectItem" id="selectItem" />
+        <div class="icons">
+            <fa-icon class="edit-icon" [icon]="faPencil" (click)="onOpenEditor(data)"></fa-icon>
+            <fa-icon class="delete-icon" [icon]="faTrashCan" (click)="onDelete(data)"></fa-icon>
         </div>
-        <img [src]="'../../../assets/images/' + data.image" />
+    </div>
+    <img [src]="'../../../assets/images/' + data.image" />
 
+
+    <!------------------------- PAVILIONS ------------------------->
+    <div *ngIf="cardType === 'pavilion'" class="card-body">
         <h1>{{data.name}}</h1>
         <h2>{{data.area.toUpperCase()}}</h2>
         <span>Powered by: {{data.poweredBy.toUpperCase()}}</span>
         <p>{{data.description}}</p>
     </div>
-</div>
-<!--------------------------- SECTORS --------------------------->
-<div *ngIf="cardType === 'sector'">
-    <div class="card-container">
-        <div class="card-header">
-            <input type="checkbox" name="selectSector" id="selectSector" />
-            <fa-icon class="icon" [icon]="faEllipsisVertical"></fa-icon>
-        </div>
-        <img [src]="'../../../assets/images/' + data.image" />
+
+    <!--------------------------- SECTORS --------------------------->
+    <div *ngIf="cardType === 'sector'" class="card-body">
         <div class="homepage">
             <span>Homepage:</span>
             <label class="switch">
@@ -30,35 +28,22 @@
         </div>
         <h1>{{data.name}}</h1>
         <h2>Associated Stands: {{data.associatedStands}}</h2>
-        <span class="status">{{data.status}}</span>
+        <div class="status">{{data.status}}</div>
         <p>Last modified {{data.lastEdit}}</p>
     </div>
-</div>
-<!---------------------------- STAND ----------------------------->
-<div *ngIf="cardType === 'stand'">
-    <div class="card-container">
-        <div class="card-header">
-            <input type="checkbox" name="selectStand" id="selectStand" />
-            <fa-icon class="icon" [icon]="faEllipsisVertical"></fa-icon>
-        </div>
-        <img [src]="'../../../assets/images/' + data.image" />
 
+    <!---------------------------- STAND ----------------------------->
+    <div *ngIf="cardType === 'stand'" class="card-body">
         <h1>{{data.name}}</h1>
-        <span>Pavilion {{data.pavilion}}</span>
-        <span>Sector {{data.sector}}</span>
-        <span>Dimensions: {{data.dimension1}} m x {{data.dimension2}} m</span>
-        <span>Assigned to: --</span>
-        <span class="open">Open</span>
+        <h2>Pavilion {{data.pavilion}}</h2>
+        <h2>Sector {{data.sector}}</h2>
+        <h2>Dimensions {{data.dimensions}}</h2>
+        <h2>Assigned to: --</h2>
+        <h2 class="open">Open</h2>
     </div>
-</div>
-<!------------------------ MERCHANDISE ------------------------>
-<div *ngIf="cardType === 'merchandise'">
-    <div class="card-container">
-        <div class="card-header">
-            <input type="checkbox" name="selectMerchandise" id="selectMerchandise" />
-            <fa-icon class="icon" [icon]="faEllipsisVertical"></fa-icon>
-        </div>
-        <img [src]="'../../../assets/images/' + data.image" />
+
+    <!------------------------ MERCHANDISE ------------------------>
+    <div *ngIf="cardType === 'merchandise'" class="card-body">
         <div class="homepage">
             <span>Homepage:</span>
             <label class="switch">
@@ -67,6 +52,6 @@
             </label>
         </div>
         <h1>{{data.name}}</h1>
-        <span>{{data.description}}</span>
+        <p>{{data.description}}</p>
     </div>
 </div>

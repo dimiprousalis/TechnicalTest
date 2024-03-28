@@ -26,6 +26,15 @@ export class MerchandiseService {
 
   addNew(merchandise: Merchandise): Observable<Merchandise> {
     return this.http.post<Merchandise>(this.apiUrl, merchandise, httpOptions)
+  }
 
+  deleteItem(merchandise: Merchandise): Observable<Merchandise> {
+    const url = `${this.apiUrl}/${merchandise.id}`; 
+    return this.http.delete<Merchandise>(url);
+  }
+
+  editItem(merchandise: Merchandise): Observable<Merchandise> {
+    const url = `${this.apiUrl}/${merchandise.id}`; 
+    return this.http.put<Merchandise>(url, merchandise, httpOptions);
   }
 }

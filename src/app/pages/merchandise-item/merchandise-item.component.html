@@ -1,48 +1,51 @@
-<div *ngIf="showAddNew" class="overlay">
-    <form class="form-container" (ngSubmit)="onSubmit()">
+<div class="overlay">
+    <div class="form-container">
         <div class="form-header">
             <h1>MERCHANDISE</h1>
-            <button class="close-btn" (click)="onCloseClick()">X</button>
+            <button class="close-btn" (click)="onClose.emit()">X</button>
         </div>
-        <div class="form-body">
-            <div class="box1">
-                <div class="form-control">
-                    <label for="image">Image</label>
-                    <img class="temp-img"src="../../../assets/images/blurpic.png" />
-                    <input class="image" type="text" name="image" [(ngModel)]="image" id="area" value="image1.png" placeholder="image1.png" readonly/>
+        <form class="form-main" (ngSubmit)="onSubmit()">
+            <div class="form-body">
+                <div class="box1">
+                    <div class="form-control">
+                        <label for="image">Image</label>
+                        <img class="temp-img" src="../../../assets/images/blurpic.png" />
+                        <input class="image" type="text" name="image" [(ngModel)]="image" id="area" value="image1.png"
+                            placeholder="image1.png" readonly />
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="form-control">
+                        <label for="text">Name</label>
+                        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" />
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Category Code</label>
+                        <input type="text" name="categoryCode" [(ngModel)]="categoryCode" id="categoryCode"
+                            placeholder="Add Category Code" />
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Tag</label>
+                        <input type="text" name="tag" [(ngModel)]="tag" id="tag" placeholder="Add Tag" />
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="form-control">
+                        <label for="description">Description</label>
+                        <textarea rows=11 type="text" name="description" [(ngModel)]="description" id="description"
+                            placeholder="Add Description"></textarea>
+                    </div>
                 </div>
             </div>
-            <div class="box2">
-                <div class="form-control">
-                    <label for="text">Name</label>
-                    <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" />
-                </div>
-                <div class="form-control">
-                    <label for="text">Category Code</label>
-                    <input type="text" name="categoryCode" [(ngModel)]="categoryCode" id="categoryCode"
-                        placeholder="Add Category Code" />
-                </div>
-                <div class="form-control">
-                    <label for="text">Tag</label>
-                    <input type="text" name="tag" [(ngModel)]="tag" id="tag" placeholder="Add Tag" />
-                </div>
+            <div class="form-footer">
+                <input type="submit" value="Save" class="submit-btn" />
             </div>
-            <div class="box3">
-                <div class="form-control">
-                    <label for="description">Description</label>
-                    <textarea rows=11 type="text" name="description" [(ngModel)]="description" id="description"
-                        placeholder="Add Description"></textarea>
-                </div>
+            <div class="next-levels">
+                <div class="levels">Second Level</div>
+                <div class="levels">Third Level</div>
+                <div class="levels">Fourth Level</div>
+                <div class="levels">Fifth Level</div>
             </div>
-        </div>
-        <div class="form-footer">
-            <input type="submit" value="Save" class="submit-btn" />
-        </div>
-        <div class="next-levels">
-            <div class="levels">Second Level</div>
-            <div class="levels">Third Level</div>
-            <div class="levels">Fourth Level</div>
-            <div class="levels">Fifth Level</div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>

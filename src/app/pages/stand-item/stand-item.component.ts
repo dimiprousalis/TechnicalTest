@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { UiService } from '../../services/ui.service';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Stand } from '../../Stand';
+
 
 @Component({
   selector: 'app-stand-item',
@@ -8,11 +8,12 @@ import { UiService } from '../../services/ui.service';
   styleUrl: './stand-item.component.css'
 })
 export class StandItemComponent {
-  showAddNew: boolean = false;
-  subscription: Subscription = new Subscription
   @Output() onAddNew: EventEmitter<any> = new EventEmitter
+  @Output() onEditItem: EventEmitter<any> = new EventEmitter
+  @Output() onClose = new EventEmitter<void>();
+  @Input() editData: Stand | null = null;
 
-
+  id: string = ''
   name: string = ''
   pavilion: string = ''
   image: string = 'image1.png'
@@ -25,17 +26,24 @@ export class StandItemComponent {
   lat1: number | null = null;
   lat2: number | null = null;
 
-  constructor(private uiService: UiService) {
-    this.subscription = this.uiService
-      .onToggle()
-      .subscribe((value) => (this.showAddNew = value));
+  ngOnInit() {
+    if (this.editData && this.editData.id !== undefined) {
+      this.id = this.editData.id,
+        this.name = this.editData.name,
+        this.pavilion = this.editData.pavilion,
+        this.image = this.editData.image,
+        this.sector = this.editData.sector,
+        this.dimensions = this.editData.dimensions,
+        this.floor = this.editData.floor,
+        this.notes = this.editData.notes,
+        this.long1 = this.editData.long1,
+        this.long2 = this.editData.long2,
+        this.lat1 = this.editData.lat1,
+        this.lat2 = this.editData.lat2
+    }
   }
 
   onSubmit() {
-    if (!this.name) {
-      alert('Please add a name!')
-      return
-    }
 
     const newData = {
       name: this.name,
@@ -50,26 +58,38 @@ export class StandItemComponent {
       lat1: this.lat1,
       lat2: this.lat2
     }
-
-    this.onAddNew.emit(newData)
-
-    this.name = '',
-      this.pavilion = '',
-      this.image = '',
-      this.sector = '',
-      this.dimensions = '',
-      this.floor = '',
-      this.notes = '',
-      this.long1 = 0,
-      this.long2 = 0,
-      this.lat1 = 0,
-      this.lat2 = 0
-
-    this.showAddNew = false
-  }
-
-  onCloseClick() {
-    this.showAddNew = false; // Set showAddNew to false when close button is clicked
+    const changedData = {
+      id: this.id,
+      name: this.name,
+      pavilion: this.pavilion,
+      image: this.image,
+      sector: this.sector,
+      dimensions: this.dimensions,
+      floor: this.floor,
+      notes: this.notes,
+      long1: this.long1,
+      long2: this.long2,
+      lat1: this.lat1,
+      lat2: this.lat2
+    }
+    if (this.editData) {
+      this.onEditItem.emit(changedData)
+    }
+    else {
+      this.onAddNew.emit(newData)
+      this.name = '',
+        this.pavilion = '',
+        this.image = '',
+        this.sector = '',
+        this.dimensions = '',
+        this.floor = '',
+        this.notes = '',
+        this.long1 = 0,
+        this.long2 = 0,
+        this.lat1 = 0,
+        this.lat2 = 0
+    }
+    location.reload();
   }
 
 }

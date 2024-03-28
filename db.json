@@ -6,7 +6,7 @@
       "image": "image1.png",
       "area": "Gaming Zone",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     },
     {
@@ -15,7 +15,7 @@
       "image": "image2.png",
       "area": "Intel Esport Show",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     },
     {
@@ -24,7 +24,7 @@
       "image": "image3.png",
       "area": "Indie Dungeon",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     },
     {
@@ -33,16 +33,16 @@
       "image": "image4.png",
       "area": "Arcade Universe",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     },
     {
       "id": "5",
-      "name": "Pavilion 5",
+      "name": "Pavilion 59",
       "image": "image5.png",
       "area": "Test Area 5",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     },
     {
@@ -51,7 +51,7 @@
       "image": "image6.png",
       "area": "Gaming Zone",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     },
     {
@@ -60,7 +60,7 @@
       "image": "image7.png",
       "area": "Gaming Zone",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     },
     {
@@ -69,7 +69,7 @@
       "image": "image8.png",
       "area": "Gaming Zone",
       "poweredBy": "Gamestop",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi"
     }
   ],
@@ -80,7 +80,7 @@
       "image": "image9.png",
       "associatedStands": "02",
       "status": "Approved",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi",
       "lastEdit": "3/25/24"
     },
@@ -90,7 +90,7 @@
       "image": "image10.png",
       "associatedStands": "11",
       "status": "Draft",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi",
       "lastEdit": "3/25/24"
     },
@@ -100,7 +100,7 @@
       "image": "image11.png",
       "associatedStands": "14",
       "status": "Draft",
-      "description": "In collaboration with Lorem Ipsum",
+      "description": "In collaboration: with Lorem Ipsum Lorem Ipsum Lorem Ipsum",
       "tags": "Giochi",
       "lastEdit": "3/25/24"
     }
@@ -134,7 +134,7 @@
       "sector": "C",
       "dimensions": "3m x 4m",
       "floor": "1",
-      "notes": "In collaboration with Lorem Ipsum"
+      "notes": "In collaboration: with Lorem Ipsum"
     },
     {
       "id": "4",
@@ -144,7 +144,7 @@
       "sector": "C",
       "dimensions": "3m x 4m",
       "floor": "1",
-      "notes": "In collaboration with Lorem Ipsum"
+      "notes": "In collaboration: with Lorem Ipsum"
     },
     {
       "id": "5",
@@ -154,7 +154,7 @@
       "sector": "A",
       "dimensions": "3m x 4m",
       "floor": "1",
-      "notes": "In collaboration with Lorem Ipsum"
+      "notes": "In collaboration: with Lorem Ipsum"
     },
     {
       "id": "6",
@@ -193,28 +193,32 @@
       "name": "Table Games",
       "image": "image20.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "homepage": true
+      "homepage": true,
+      "categoryCode": "1234"
     },
     {
       "id": "2",
       "name": "Board Games",
       "image": "image21.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "homepage": true
+      "homepage": true,
+      "categoryCode": "1234"
     },
     {
       "id": "3",
       "name": "Gambling Games",
       "image": "image22.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "homepage": true
+      "homepage": true,
+      "categoryCode": "1234"
     },
     {
       "id": "4",
       "name": "Stationary Store",
       "image": "image23.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "homepage": true
+      "homepage": true,
+      "categoryCode": "1234"
     }
   ]
 }

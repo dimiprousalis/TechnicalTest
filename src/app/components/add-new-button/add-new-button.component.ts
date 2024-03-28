@@ -16,5 +16,7 @@ export class AddNewButtonComponent {
   // Function called when the button is clicked
   onClick() {
     this.btnClick.emit(); // Emitting the click event to the parent component
+
+    
   }
 }

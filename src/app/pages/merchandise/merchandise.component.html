@@ -1,5 +1,11 @@
 <app-display-bar></app-display-bar>
-<app-add-new-button (btnClick)="toggleAddNew()"></app-add-new-button>
-<app-merchandise-item (onAddNew)="addNew($event)"></app-merchandise-item>
-<div class="card-grid-container"><app-card *ngFor="let merchandise of merchandises" [data]="merchandise" cardType="merchandise">
-    </app-card></div>
+<app-add-new-button (btnClick)="showAddNew()"></app-add-new-button>
+<div *ngIf="isFormVisible">
+    <app-merchandise-item (onAddNew)="addNew($event)" (onEditItem)="editItem($event)" [editData]="editData"
+        (onClose)="closeForm()"></app-merchandise-item>
+</div>
+<div class="card-grid-container">
+    <app-card *ngFor="let merchandise of merchandises" [data]="merchandise" cardType="merchandise"
+        (onDeleteItem)="deleteItem(merchandise)" (onOpenEditItem)="openEditItem(merchandise)">
+    </app-card>
+</div>

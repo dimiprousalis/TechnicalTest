@@ -28,4 +28,15 @@ export class PavilionService {
 
   }
 
+  deleteItem(pavilion: Pavilion): Observable<Pavilion> {
+    const url = `${this.apiUrl}/${pavilion.id}`; // URL for the specific task
+    return this.http.delete<Pavilion>(url);
+  }
+
+  editItem(pavilion: Pavilion): Observable<Pavilion> {
+    const url = `${this.apiUrl}/${pavilion.id}`; // URL for the specific task
+    console.log("service called" + pavilion.name)
+    return this.http.put<Pavilion>(url, pavilion, httpOptions);
+  }
+
 }

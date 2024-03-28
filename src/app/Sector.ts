@@ -1,5 +1,5 @@
 export interface Sector {
-    id?: number;
+    id?: string;
     name: string;
     image: string;
     associatedStands: string;

@@ -1,37 +1,38 @@
-<div *ngIf="showAddNew" class="overlay">
-    <form class="form-container" (ngSubmit)="onSubmit()">
+<div class="overlay">
+    <div class="form-container">
         <div class="form-header">
             <h1>SECTOR</h1>
-            <button class="close-btn" (click)="onCloseClick()">X</button>
+            <button class="close-btn" (click)="onClose.emit()">X</button>
         </div>
-        <div class="form-body">
-            <div class="box1">
-                <div class="form-control">
-                    <label for="text">Name</label>
-                    <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" />
+        <form class="form-main" (ngSubmit)="onSubmit()">
+            <div class="form-body">
+                <div class="box1">
+                    <div class="form-control">
+                        <label for="text">Name</label>
+                        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" />
+                    </div>
+                    <div class="form-control">
+                        <label for="tags">Tags</label>
+                        <input type="text" name="tags" [(ngModel)]="tags" id="tags" placeholder="Add tags" />
+                    </div>
                 </div>
-               
-              
-                <div class="form-control">
-                    <label for="tags">Tags</label>
-                    <input type="text" name="tags" [(ngModel)]="tags" id="tags" placeholder="Add tags" />
+                <div class="box2">
+                    <div class="form-control">
+                        <label for="image">Image</label>
+                        <img class="temp-img" src="../../../assets/images/blurpic.png" />
+                        <input type="text" name="image" [(ngModel)]="image" id="area" value="image1.png"
+                            placeholder="image1.png" readonly />
+                    </div>
+                    <div class="form-control">
+                        <label for="description">Description</label>
+                        <textarea rows=8 type="text" name="description" [(ngModel)]="description" id="description"
+                            placeholder="Add Description"></textarea>
+                    </div>
                 </div>
             </div>
-            <div class="box2">
-                <div class="form-control">
-                    <label for="image">Image</label>
-                    <img class="temp-img"src="../../../assets/images/blurpic.png" />
-                    <input type="text" name="image" [(ngModel)]="image" id="area" value="image1.png" placeholder="image1.png" readonly/>
-                </div>
-                <div class="form-control">
-                    <label for="description">Description</label>
-                    <textarea rows=8 type="text" name="description" [(ngModel)]="description" id="description"
-                        placeholder="Add Description"></textarea>
-                </div>
+            <div class="form-footer">
+                <input type="submit" value="Save" class="submit-btn" />
             </div>
-        </div>
-        <div class="form-footer">
-            <input type="submit" value="Save" class="submit-btn" />
-        </div>
-    </form>
+        </form>
+    </div>
 </div>

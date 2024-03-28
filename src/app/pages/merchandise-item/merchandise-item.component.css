@@ -21,7 +21,7 @@ textarea {
 }
 
 .levels {
-    height: 90%;
+    height: 200px;
     border: 1px solid var(--custom-green);
     border-radius: 5px;
     width: 100%;
@@ -36,4 +36,5 @@ textarea {
     border-radius: 7px;
     color: white;
 }
+
 

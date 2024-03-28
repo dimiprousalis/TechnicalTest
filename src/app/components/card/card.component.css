@@ -8,7 +8,13 @@
     border-radius: 10px;
     margin: 0 auto;
     max-width: 250px;
-    min-height: 320px;
+    min-height: 370px;
+}
+
+.card-body {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .horizontal-container {
@@ -35,6 +41,19 @@ img {
     padding-bottom: 10px;
 }
 
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.edit-icon:hover {
+    color: var(--custom-green)
+}
+
+.delete-icon:hover {
+    color: red;
+}
+
 input[type="checkbox"] {
     width: 1.5em;
     height: 1.5rem;
@@ -44,6 +63,7 @@ input[type="checkbox"] {
 h1 {
     font-size: 15px;
     font-weight: 300;
+    padding-top: 10px;
 }
 
 h2 {
@@ -53,7 +73,7 @@ h2 {
 
 span,
 p {
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .status {
@@ -62,6 +82,7 @@ p {
     border-radius: 10px;
     text-align: center;
     padding: 2px;
+    font-size: 10px;
 }
 
 .open {
@@ -81,7 +102,9 @@ p {
     gap: 5px;
     align-items: center;
     padding-top: 10px;
+
 }
+
 .switch {
     position: relative;
     display: inline-block;

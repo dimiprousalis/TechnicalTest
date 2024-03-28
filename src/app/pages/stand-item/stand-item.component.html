@@ -1,72 +1,74 @@
-<div *ngIf="showAddNew" class="overlay">
-    <form class="form-container stand" (ngSubmit)="onSubmit()">
+<div class="overlay">
+    <div class="form-container stand">
         <div class="form-header">
             <h1>STAND</h1>
-            <button class="close-btn" (click)="onCloseClick()">X</button>
+            <button class="close-btn" (click)="onClose.emit()">X</button>
         </div>
-        <div class="form-body">
-            <div class="box1">
-                <div class="form-control">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" />
-                </div>
-                <div class="form-control">
-                    <label for="pavilion">Pavilion</label>
-                    <select name="pavilion" id="pavilion" [(ngModel)]="pavilion">
-                        <option value="1">Pavilion 1</option>
-                        <option value="2">Pavilion 2</option>
-                        <option value="3">Pavilion 3</option>
-                    </select>
-                </div>
-                <div class="form-control">
-                    <label for="sector">Sector</label>
-                    <select name="sector" id="sector" [(ngModel)]="sector">
-                        <option value="A">Sector A</option>
-                        <option value="B">Sector B</option>
-                        <option value="C">Sector C</option>
-                    </select>
-                </div>
-                <div class="form-control">
-                    <label for="dimensions">Dimensions</label>
-                    <input type="text" name="dimensions" [(ngModel)]="dimensions" id="dimensions"
-                        placeholder="3m x 5m" />
-                </div>
-                <div class="form-control">
-                    <label for="floor">Floor</label>
-                    <select name="floor" id="floor" [(ngModel)]="floor">
-                        <option value="1">Floor 1</option>
-                        <option value="2">Floor 2</option>
-                        <option value="3">Floor 3</option>
-                    </select>
-                </div>
-                <div class="form-control coordinates">
-                    <label for="coordinates">Coordinates</label>
-                    <div class="long-lat-1">
-                        <input type="text" name="long1" [(ngModel)]="long1" id="long1" placeholder="Long" />
-                        <input type="text" name="lat1" [(ngModel)]="lat1" id="lat1" placeholder="Lat" />
+        <form class="form-main" (ngSubmit)="onSubmit()">
+            <div class="form-body">
+                <div class="box1">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" />
                     </div>
-                    <div class="long-lat-1">
-                        <input type="text" name="long2" [(ngModel)]="long2" id="long2" placeholder="Long" />
-                        <input type="text" name="lat2" [(ngModel)]="lat2" id="lat2" placeholder="Lat" />
+                    <div class="form-control">
+                        <label for="pavilion">Pavilion</label>
+                        <select name="pavilion" id="pavilion" [(ngModel)]="pavilion">
+                            <option value="1">Pavilion 1</option>
+                            <option value="2">Pavilion 2</option>
+                            <option value="3">Pavilion 3</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="sector">Sector</label>
+                        <select name="sector" id="sector" [(ngModel)]="sector">
+                            <option value="A">Sector A</option>
+                            <option value="B">Sector B</option>
+                            <option value="C">Sector C</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="dimensions">Dimensions</label>
+                        <input type="text" name="dimensions" [(ngModel)]="dimensions" id="dimensions"
+                            placeholder="3m x 5m" />
+                    </div>
+                    <div class="form-control">
+                        <label for="floor">Floor</label>
+                        <select name="floor" id="floor" [(ngModel)]="floor">
+                            <option value="1">Floor 1</option>
+                            <option value="2">Floor 2</option>
+                            <option value="3">Floor 3</option>
+                        </select>
+                    </div>
+                    <div class="form-control coordinates">
+                        <label for="coordinates">Coordinates</label>
+                        <div class="long-lat-1">
+                            <input type="text" name="long1" [(ngModel)]="long1" id="long1" placeholder="Long" />
+                            <input type="text" name="lat1" [(ngModel)]="lat1" id="lat1" placeholder="Lat" />
+                        </div>
+                        <div class="long-lat-1">
+                            <input type="text" name="long2" [(ngModel)]="long2" id="long2" placeholder="Long" />
+                            <input type="text" name="lat2" [(ngModel)]="lat2" id="lat2" placeholder="Lat" />
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="form-control">
+                        <label for="image">Image</label>
+                        <img class="temp-img" src="../../../assets/images/blurpic.png" />
+                        <input type="text" name="image" [(ngModel)]="image" id="area" value="image1.png"
+                            placeholder="image1.png" readonly />
+                    </div>
+                    <div class="form-control">
+                        <label for="notes">Notes</label>
+                        <textarea rows=8 type="text" name="notes" [(ngModel)]="notes" id="notes"
+                            placeholder="Add notes"></textarea>
                     </div>
                 </div>
             </div>
-            <div class="box2">
-                <div class="form-control">
-                    <label for="image">Image</label>
-                    <img class="temp-img" src="../../../assets/images/blurpic.png" />
-                    <input type="text" name="image" [(ngModel)]="image" id="area" value="image1.png"
-                        placeholder="image1.png" readonly />
-                </div>
-                <div class="form-control">
-                    <label for="notes">Notes</label>
-                    <textarea rows=8 type="text" name="notes" [(ngModel)]="notes" id="notes"
-                        placeholder="Add notes"></textarea>
-                </div>
+            <div class="form-footer">
+                <input type="submit" value="Save" class="submit-btn" />
             </div>
-        </div>
-        <div class="form-footer">
-            <input type="submit" value="Save" class="submit-btn" />
-        </div>
-    </form>
+        </form>
+    </div>
 </div>

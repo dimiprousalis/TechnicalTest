@@ -1,5 +1,8 @@
 <app-display-bar></app-display-bar>
-<app-add-new-button (btnClick)="toggleAddNew()"></app-add-new-button>
-<app-pavilion-item (onAddNew)="addNew($event)"></app-pavilion-item>
-<div class="card-grid-container"><app-card *ngFor="let pavilion of pavilions" [data]="pavilion" cardType="pavilion">
+<app-add-new-button (btnClick)="showAddNew()"></app-add-new-button>
+<div *ngIf="isFormVisible">
+    <app-pavilion-item (onAddNew)="addNew($event)"(onEditItem)="editItem($event)" [editData]="editData" (onClose)="closeForm()"></app-pavilion-item>
+</div>
+<div class="card-grid-container"><app-card *ngFor="let pavilion of pavilions" [data]="pavilion" cardType="pavilion"
+        (onDeleteItem)="deleteItem(pavilion)" (onOpenEditItem)="openEditItem(pavilion)">
     </app-card></div>
