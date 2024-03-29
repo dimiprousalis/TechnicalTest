@@ -20,11 +20,6 @@ textarea, select {
     color: white;
 }
 
-.stand {
-    width: 35%;
-    min-width: 600px;
-}
-
 .coordinates input {
     width: 50%;
     margin: 5px;
@@ -33,4 +28,8 @@ textarea, select {
 .long-lat-1, .long-lat-2 {
     display: flex;
     flex-direction: row;
+}
+
+.stand-form {
+    padding: 0;
 }

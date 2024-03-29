@@ -1,17 +1,17 @@
 <div class="overlay">
     <div class="form-container stand">
-        <div class="form-header">
+        <div class="form-header stand">
             <h1>STAND</h1>
             <button class="close-btn" (click)="onClose.emit()">X</button>
         </div>
         <form class="form-main" (ngSubmit)="onSubmit()">
             <div class="form-body">
                 <div class="box1">
-                    <div class="form-control">
+                    <div class="form-control stand-form">
                         <label for="name">Name</label>
                         <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" />
                     </div>
-                    <div class="form-control">
+                    <div class="form-control stand-form">
                         <label for="pavilion">Pavilion</label>
                         <select name="pavilion" id="pavilion" [(ngModel)]="pavilion">
                             <option value="1">Pavilion 1</option>
@@ -19,7 +19,7 @@
                             <option value="3">Pavilion 3</option>
                         </select>
                     </div>
-                    <div class="form-control">
+                    <div class="form-control stand-form">
                         <label for="sector">Sector</label>
                         <select name="sector" id="sector" [(ngModel)]="sector">
                             <option value="A">Sector A</option>
@@ -27,12 +27,12 @@
                             <option value="C">Sector C</option>
                         </select>
                     </div>
-                    <div class="form-control">
+                    <div class="form-control stand-form">
                         <label for="dimensions">Dimensions</label>
                         <input type="text" name="dimensions" [(ngModel)]="dimensions" id="dimensions"
                             placeholder="3m x 5m" />
                     </div>
-                    <div class="form-control">
+                    <div class="form-control stand-form">
                         <label for="floor">Floor</label>
                         <select name="floor" id="floor" [(ngModel)]="floor">
                             <option value="1">Floor 1</option>
@@ -53,13 +53,13 @@
                     </div>
                 </div>
                 <div class="box2">
-                    <div class="form-control">
+                    <div class="form-control stand-form">
                         <label for="image">Image</label>
                         <img class="temp-img" src="../../../assets/images/blurpic.png" />
                         <input type="text" name="image" [(ngModel)]="image" id="area" value="image1.png"
                             placeholder="image1.png" readonly />
                     </div>
-                    <div class="form-control">
+                    <div class="form-control stand-form">
                         <label for="notes">Notes</label>
                         <textarea rows=8 type="text" name="notes" [(ngModel)]="notes" id="notes"
                             placeholder="Add notes"></textarea>

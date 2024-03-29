@@ -96,9 +96,10 @@ p {
     display: flex;
     background-color: var(--custom-lightgray);
     color: white;
-    width: 85%;
-    min-width: 900px;
-    max-width: 1300px;
+    /* width: 85%; */
+    /* min-width: 900px;
+    max-width: 1300px; */
+    width: 1000px;
     margin: auto;
     min-height: 50px;
     border-bottom: 1px solid gray;
@@ -108,7 +109,7 @@ p {
 }
 
 .bars .card-body {
-    gap: 20px;
+    /* gap: 5px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -116,7 +117,8 @@ p {
 }
 
 .bars h1,
-.bars h2 {
+.bars h2, .bars span,
+.bars .status {
     font-size: 13px;
     font-weight: 300;
     text-align: left;
@@ -124,17 +126,35 @@ p {
     margin: 0;
 }
 
-.bars span,
-.bars p,
-.bars .status {
+
+.bars p {
     font-size: 13px;
+    width: 250px;
 }
 
-.bars .card-header,
+.bars .card-header {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+
 .bars .icons {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.bars input {
+    margin: 0 10px;
+}
+
+.bars .homepage input {
+    margin: 0 40px;
+}
+
+.bars .merch-desc {
+    width: 500px;
 }
 
 .bars img {
@@ -163,12 +183,14 @@ p {
     display: inline-block;
     width: 45px;
     height: 15px;
+   
 }
 
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
+    width: 10%;
 }
 
 .slider {

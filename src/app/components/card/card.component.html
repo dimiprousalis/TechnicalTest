@@ -20,15 +20,18 @@
     <!--------------------------- SECTORS --------------------------->
     <div *ngIf="cardType === 'sector'" class="card-body">
         <div class="homepage">
-            <span>Homepage:</span>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
+            <div *ngIf="isViewCard">
+                <span>Homepage:</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <div class="slider round"></div>
+                </label>
+            </div>
+            <input type="checkbox" name="selectItem" id="selectItem" />
         </div>
         <h1>{{data.name}}</h1>
         <h2>Associated Stands: {{data.associatedStands}}</h2>
-        <div class="status">{{data.status}}</div>
+        <span class="status">{{data.status}}</span>
         <p>Last modified {{data.lastEdit}}</p>
     </div>
 
@@ -38,20 +41,27 @@
         <h2>Pavilion {{data.pavilion}}</h2>
         <h2>Sector {{data.sector}}</h2>
         <h2>Dimensions {{data.dimensions}}</h2>
-        <h2>Assigned to: --</h2>
-        <h2 class="open">Open</h2>
+        <div *ngIf="isViewCard">
+            <h2>Assigned to: --</h2>
+        </div>
+        <div *ngIf="isViewCard">
+            <h2 class="open">Open</h2>
+        </div>
     </div>
 
     <!------------------------ MERCHANDISE ------------------------>
     <div *ngIf="cardType === 'merchandise'" class="card-body">
         <div class="homepage">
-            <span>Homepage:</span>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
+            <div *ngIf="isViewCard">
+                <span>Homepage:</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <div class="slider round"></div>
+                </label>
+            </div>
+            <input type="checkbox" name="selectItem" id="selectItem" />
         </div>
         <h1>{{data.name}}</h1>
-        <p>{{data.description}}</p>
+        <p class="merch-desc">{{data.description}}</p>
     </div>
 </div>
