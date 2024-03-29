@@ -9,10 +9,11 @@ import { PavilionService } from '../../services/pavilion.service';
 })
 export class PavilionsComponent {
   pavilions: Pavilion[] = []
-  isFormVisible: boolean=false;
+  isFormVisible: boolean = false;
   editData: Pavilion | null = null; // Declare editData property
+  isViewCard: boolean = true;
 
-  constructor(private pavilionService: PavilionService) {}
+  constructor(private pavilionService: PavilionService) { }
 
   ngOnInit(): void {
     this.pavilionService.getData().subscribe((pavilions) => (this.pavilions = pavilions));
@@ -21,10 +22,16 @@ export class PavilionsComponent {
   showAddNew() {
     this.isFormVisible = true
   }
+  showCardView() {
+    this.isViewCard = true
+  }
+  showGridView() {
+    this.isViewCard = false
+  }
 
   closeForm() {
     this.isFormVisible = false
-    this.editData= null
+    this.editData = null
   }
 
   addNew(pavilion: Pavilion) {

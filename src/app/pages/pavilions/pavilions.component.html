@@ -1,8 +1,24 @@
-<app-display-bar></app-display-bar>
+<app-display-bar (cardsClick)="showCardView()" (barsClick)="showGridView()"></app-display-bar>
 <app-add-new-button (btnClick)="showAddNew()"></app-add-new-button>
 <div *ngIf="isFormVisible">
-    <app-pavilion-item (onAddNew)="addNew($event)"(onEditItem)="editItem($event)" [editData]="editData" (onClose)="closeForm()"></app-pavilion-item>
+    <app-pavilion-item (onAddNew)="addNew($event)" (onEditItem)="editItem($event)" [editData]="editData"
+        (onClose)="closeForm()">
+    </app-pavilion-item>
 </div>
-<div class="card-grid-container"><app-card *ngFor="let pavilion of pavilions" [data]="pavilion" cardType="pavilion"
-        (onDeleteItem)="deleteItem(pavilion)" (onOpenEditItem)="openEditItem(pavilion)">
-    </app-card></div>
+<div *ngIf="!isViewCard" class="bars-view-header">
+    <div class="bars-h">
+        <h4>Actions</h4>
+        <h4>Image</h4>
+    </div>
+    <div class="bars-b">
+        <h4>Name</h4>
+        <h4>Area</h4>
+        <h4>Powered By</h4>
+        <h4>Description</h4>
+    </div>
+</div>
+<div [ngClass]="{'card-grid-container': isViewCard, 'card-horizontal-container': !isViewCard}">
+    <app-card *ngFor="let pavilion of pavilions" [data]="pavilion" cardType="pavilion"
+        (onDeleteItem)="deleteItem(pavilion)" (onOpenEditItem)="openEditItem(pavilion)" [isViewCard]="isViewCard">
+    </app-card>
+</div>

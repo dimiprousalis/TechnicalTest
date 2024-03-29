@@ -1,4 +1,6 @@
-.card-container {
+/* --------------------------CARD GRID VIEW------------------------------- */
+
+.cards {
     background-color: var(--custom-lightgray);
     color: white;
     display: flex;
@@ -11,29 +13,17 @@
     min-height: 370px;
 }
 
-.card-body {
+.cards .card-body {
     gap: 10px;
     display: flex;
     flex-direction: column;
-}
-
-.horizontal-container {
-    display: flex;
-    background-color: var(--custom-lightgray);
-    color: white;
-    height: 60px;
-    border-bottom: 1px solid gray;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    text-align: left;
 }
 
 img {
     height: 100%;
 }
 
-.card-header {
+.cards .card-header {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--custom-green);
@@ -41,17 +31,21 @@ img {
     padding-bottom: 10px;
 }
 
-.icons {
+.cards .icons {
     display: flex;
     gap: 15px;
 }
 
-.edit-icon:hover {
+.cards .edit-icon:hover {
     color: var(--custom-green)
 }
 
 .delete-icon:hover {
     color: red;
+}
+
+.edit-icon:hover {
+    color: var(--custom-green);
 }
 
 input[type="checkbox"] {
@@ -60,13 +54,13 @@ input[type="checkbox"] {
     accent-color: green;
 }
 
-h1 {
+.cards h1 {
     font-size: 15px;
     font-weight: 300;
     padding-top: 10px;
 }
 
-h2 {
+.cards h2 {
     font-size: 12px;
     font-weight: 300;
 }
@@ -76,7 +70,7 @@ p {
     font-size: 11px;
 }
 
-.status {
+.cards .status {
     background-color: #659442;
     width: 30%;
     border-radius: 10px;
@@ -85,7 +79,7 @@ p {
     font-size: 10px;
 }
 
-.open {
+.cards .open {
     background-color: var(--custom-green);
     width: 25%;
     border-radius: 10px;
@@ -94,7 +88,66 @@ p {
     align-self: flex-end;
 }
 
-/* ---------------------------HOMEPAGE TOGGLE-------------------------- */
+/* ------------------------------------------------------------------------ */
+
+/* --------------------------HORIZONTAL VIEW------------------------------- */
+
+.bars {
+    display: flex;
+    background-color: var(--custom-lightgray);
+    color: white;
+    width: 85%;
+    min-width: 900px;
+    max-width: 1300px;
+    margin: auto;
+    min-height: 50px;
+    border-bottom: 1px solid gray;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+}
+
+.bars .card-body {
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.bars h1,
+.bars h2 {
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+    width: 150px;
+    margin: 0;
+}
+
+.bars span,
+.bars p,
+.bars .status {
+    font-size: 13px;
+}
+
+.bars .card-header,
+.bars .icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bars img {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+
+/* -----------------------------HOMEPAGE TOGGLE----------------------------- */
 
 .homepage {
     display: flex;
@@ -154,4 +207,4 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */

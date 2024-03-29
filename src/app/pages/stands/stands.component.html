@@ -1,7 +1,22 @@
-<app-display-bar></app-display-bar>
+<app-display-bar (cardsClick)="showCardView()" (barsClick)="showGridView()"></app-display-bar>
 <app-add-new-button (btnClick)="showAddNew()"></app-add-new-button>
 <div *ngIf="isFormVisible">
     <app-stand-item (onAddNew)="addNew($event)"(onEditItem)="editItem($event)" [editData]="editData" (onClose)="closeForm()"></app-stand-item>
 </div>
-<div class="card-grid-container"><app-card *ngFor="let stand of stands" [data]="stand" cardType="stand"  (onDeleteItem)="deleteItem(stand)" (onOpenEditItem)="openEditItem(stand)">
+<div *ngIf="!isViewCard" class="bars-view-header">
+    <div class="bars-h">
+        <h4>Actions</h4>
+        <h4>Image</h4>
+    </div>
+    <div class="bars-b">
+        <h4>Stand</h4>
+        <h4>Pavilion</h4>
+        <h4>Sector</h4>
+        <h4>Dimensions</h4>
+        <h4>Assigned</h4>
+        <h4>Status</h4>
+    </div>
+
+</div>
+<div [ngClass]="{'card-grid-container': isViewCard, 'card-horizontal-container': !isViewCard}"><app-card *ngFor="let stand of stands" [data]="stand" cardType="stand"  (onDeleteItem)="deleteItem(stand)" (onOpenEditItem)="openEditItem(stand)" [isViewCard]="isViewCard">
     </app-card></div>

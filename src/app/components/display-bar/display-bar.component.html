@@ -1,8 +1,8 @@
 <div class="container">
     <div class="sub-container">
         <span>Visualization</span>
-        <fa-icon class="icon" [icon]="faGrip" ></fa-icon>
-        <fa-icon class="icon" [icon]="faBars" ></fa-icon>
+        <fa-icon class="icon" [icon]="faGrip"  [style.color]="isCardsClicked ? '#2a9a6a' : 'white'" (click)="onClickCards()"></fa-icon>
+        <fa-icon class="icon" [icon]="faBars"  [style.color]="isBarsClicked ? '#2a9a6a' : 'white'" (click)="onClickBars()"></fa-icon>
     </div>
     <div class="sub-container">
         <label for="selection">Select All </label>

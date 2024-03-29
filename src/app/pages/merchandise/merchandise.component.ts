@@ -9,10 +9,11 @@ import { Merchandise } from '../../Merchandise';
 })
 export class MerchandiseComponent {
   merchandises: Merchandise[] = []
-  isFormVisible: boolean=false;
-  editData: Merchandise | null = null; 
+  isFormVisible: boolean = false;
+  editData: Merchandise | null = null;
+  isViewCard: boolean = true;
 
-  constructor(private merchandiseService: MerchandiseService) {}
+  constructor(private merchandiseService: MerchandiseService) { }
 
   ngOnInit(): void {
     this.merchandiseService.getData().subscribe((merchandises) => (this.merchandises = merchandises));
@@ -22,9 +23,16 @@ export class MerchandiseComponent {
     this.isFormVisible = true
   }
 
+  showCardView() {
+    this.isViewCard = true
+  }
+  showGridView() {
+    this.isViewCard = false
+  }
+
   closeForm() {
     this.isFormVisible = false
-    this.editData= null
+    this.editData = null
   }
 
   addNew(merchandise: Merchandise) {

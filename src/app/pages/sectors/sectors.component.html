@@ -1,9 +1,23 @@
-<app-display-bar></app-display-bar>
+<app-display-bar (cardsClick)="showCardView()" (barsClick)="showGridView()"></app-display-bar>
 <app-add-new-button (btnClick)="showAddNew()"></app-add-new-button>
 <div *ngIf="isFormVisible">
     <app-sector-item (onAddNew)="addNew($event)" (onEditItem)="editItem($event)" [editData]="editData"
         (onClose)="closeForm()"></app-sector-item>
 </div>
-<div class="card-grid-container"><app-card *ngFor="let sector of sectors" [data]="sector" cardType="sector"
-        (onDeleteItem)="deleteItem(sector)" (onOpenEditItem)="openEditItem(sector)">
+<div *ngIf="!isViewCard" class="bars-view-header">
+    <div class="bars-h">
+        <h4 class="b-actions">Actions</h4>
+        <h4 class="b-image">Image</h4>
+    </div>
+    <div class="bars-b">
+        <h4>Homepage</h4>
+        <h4>Name</h4>
+        <h4>Stands</h4>
+        <h4>Status</h4>
+        <h4>Last Edit</h4>
+    </div>
+</div>
+<div [ngClass]="{'card-grid-container': isViewCard, 'card-horizontal-container': !isViewCard}"><app-card
+        *ngFor="let sector of sectors" [data]="sector" cardType="sector" (onDeleteItem)="deleteItem(sector)"
+        (onOpenEditItem)="openEditItem(sector)" [isViewCard]="isViewCard">
     </app-card></div>

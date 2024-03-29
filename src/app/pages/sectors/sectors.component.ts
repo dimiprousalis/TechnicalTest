@@ -9,10 +9,11 @@ import { SectorService } from '../../services/sector.service';
 })
 export class SectorsComponent {
   sectors: Sector[] = []
-  isFormVisible: boolean=false;
+  isFormVisible: boolean = false;
   editData: Sector | null = null; // Declare editData property
+  isViewCard: boolean = true;
 
-  constructor(private sectorService: SectorService) {}
+  constructor(private sectorService: SectorService) { }
 
   ngOnInit(): void {
     this.sectorService.getData().subscribe((sectors) => (this.sectors = sectors));
@@ -22,9 +23,16 @@ export class SectorsComponent {
     this.isFormVisible = true
   }
 
+  showCardView() {
+    this.isViewCard = true
+  }
+  showGridView() {
+    this.isViewCard = false
+  }
+
   closeForm() {
     this.isFormVisible = false
-    this.editData= null
+    this.editData = null
   }
 
   addNew(sector: Sector) {
@@ -48,6 +56,6 @@ export class SectorsComponent {
     this.sectorService
       .editItem(sector).subscribe();
 
-      
+
   }
 }

@@ -1,0 +1,25 @@
+.bars-view-header {
+    display: flex;
+    width: 85%;
+    min-width: 900px;
+    max-width: 1300px;
+    align-items: center;
+    padding: 8px;
+    background-color: var(--custom-green);
+    color: white;
+    font-size: 13px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.bars-h {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bars-b {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}

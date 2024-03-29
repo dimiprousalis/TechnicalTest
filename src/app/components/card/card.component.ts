@@ -13,6 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 export class CardComponent {
 
   @Input() data: any;
+  @Input() isViewCard: boolean = true
   @Input() cardType: string = ""
   @Output() onDeleteItem: EventEmitter<any> = new EventEmitter()
   @Output() onOpenEditItem: EventEmitter<any> = new EventEmitter()

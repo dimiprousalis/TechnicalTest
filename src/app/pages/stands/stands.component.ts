@@ -10,10 +10,11 @@ import { StandService } from '../../services/stand.service';
 })
 export class StandsComponent {
   stands: Stand[] = []
-  isFormVisible: boolean=false;
+  isFormVisible: boolean = false;
   editData: Stand | null = null;
+  isViewCard: boolean = true;
 
-  constructor(private standService: StandService) {}
+  constructor(private standService: StandService) { }
 
   ngOnInit(): void {
     this.standService.getData().subscribe((stands) => (this.stands = stands));
@@ -23,9 +24,16 @@ export class StandsComponent {
     this.isFormVisible = true
   }
 
+  showCardView() {
+    this.isViewCard = true
+  }
+  showGridView() {
+    this.isViewCard = false
+  }
+
   closeForm() {
     this.isFormVisible = false
-    this.editData= null
+    this.editData = null
   }
 
   addNew(stand: Stand) {

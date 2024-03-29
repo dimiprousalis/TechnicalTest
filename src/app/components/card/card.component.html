@@ -1,4 +1,4 @@
-<div class="card-container sector">
+<div [ngClass]="{'cards': isViewCard, 'bars': !isViewCard}" class="sector">
     <div class="card-header">
         <input type="checkbox" name="selectItem" id="selectItem" />
         <div class="icons">

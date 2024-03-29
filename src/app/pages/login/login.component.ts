@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr'
 import { AuthService } from '../../services/auth.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +13,6 @@ export class LoginComponent {
   constructor(private builder: FormBuilder, private service: AuthService,
     private router: Router, private toastr: ToastrService) {
     sessionStorage.clear();
-
   }
   result: any;
 
@@ -42,6 +40,5 @@ export class LoginComponent {
     } else {
       this.toastr.warning('Please enter valid data.')
     }
-
   }
 }
