@@ -1,27 +1,46 @@
-# HidonixProject
+# Technical Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+Angular application designed for managing pavilions, sectors, stands, and merchandise categories with login and CRUD functionalities.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+-  Navigate to the project directory:
+   - `cd hidonix-project`
+-   Install dependencies
+    - `npm install`
+-   Start the development server
+    - `npm run server` to start the json-server and `ng serve`
+-   Navigate to `http://localhost:4200/`
+    - json server will be running on `http://localhost:5000/`
 
-## Code scaffolding
+## Technologies Used
+-  **Angular**: Front-end framework for building single-page applications.
+-  **JSON Server**: Mock server used for simulating backend functionality.
+-  **FontAwesome**: Library for including icons in the application.
+-  **Ngx-Toastr**: Library for displaying toast notifications.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
+-  Authentication: User authentication is implemented using username and password.
+   - Only users with an Admin role can delete elements
+-  CRUD Operations: CRUD operations are available for managing pavilions, sectors, stands, and merchandise categories.
 
-## Build
+## Usage
+1. **Login**: Use the login form on route /login
+     -   Login Credentials for test supervisor:
+         -  Username: supervisor1
+         -  Password: 12345
+   -   Login Credentials for test admin:
+         -  Username: admin1
+         -  Password: 12345        
+2. **Register**: You can also register for an account and select either Supervisor or Admin role at registration.
+3. **Navigation**: Once logged in, navigate through different sections using the menu.
+     -  Navigation is limited only to the tabs for "Pavilions", "Sectors", "Stand, and "Merchandise Categories"
+4. **Manage Data**: Perform CRUD operations on pavilions, sectors, stands, and merchandise categories.
+     - To **create** a new item, click on the "Add New" icon at the top left of the screen
+     - To **update** an existing item, click on the pencil icon for the element
+     - To **delete** an existing item, click on the trash can icon for the element
+         -  Note: Only users with admin access can delete items
+5. **Display View**: Toggle between the two "Visualization" icons to change the view of the elements
+     -  Note: The Visualization icons are the only functional items in the display bar 
+6. **Logout**: Click on "Logout" on the top right of the screen when done.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
